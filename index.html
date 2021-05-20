@@ -65,9 +65,8 @@
           if (lastDirection !== keys.right) {
             head.speedX = -head.size;
             head.speedY = 0;
+            lastDirection = keys.left;
           }
-
-          lastDirection = keys.left;
 
           break;
         case keys.up:
@@ -76,9 +75,9 @@
           if (lastDirection !== keys.down) {
             head.speedY = -head.size;
             head.speedX = 0;
+            lastDirection = keys.up;
           }
           
-          lastDirection = keys.up;
 
           break;
         case keys.right:
@@ -87,9 +86,9 @@
           if (lastDirection !== keys.left) {
             head.speedX = head.size;
             head.speedY = 0;
+            lastDirection = keys.right;
           }
           
-          lastDirection = keys.right;
 
           break;
         case keys.down:
@@ -98,9 +97,9 @@
           if (lastDirection !== keys.up) {
             head.speedY = head.size;
             head.speedX = 0;
+            lastDirection = keys.down;
           }
 
-          lastDirection = keys.down;
 
           break;
       }
