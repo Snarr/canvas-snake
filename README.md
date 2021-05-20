@@ -1,6 +1,8 @@
 # Snake
 For my first HTML5 Canvas project I decided to make Snake in an hour! It was fun to try recreating this classic game for the first time.
 
+[Click here to play](https://snarr.github.io/snake "Snake")
+
 ### How To Play
 
 - Eat red apples to grow your snake.
