@@ -44,6 +44,12 @@ setInterval(() => {
   if (gameover) {
     ctx.fillStyle = 'black';
     ctx.fillRect(0, 0, windowSize*unitSize, windowSize*unitSize);
+
+    ctx.font = '48px serif';
+    ctx.fillStyle = 'white';
+    ctx.fillText(`Gameover!`, 1*unitSize, 3*unitSize);
+    ctx.fillText(`Refresh to try again.`, 1*unitSize, 6*unitSize);
+
     pause = true;
     return;
   }
