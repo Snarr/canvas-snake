@@ -1,4 +1,4 @@
-# canvas-snake
+# Snake
 For my first HTML5 Canvas project I decided to make Snake in an hour! It was fun to try recreating this classic game for the first time.
 
 ### How To Play
