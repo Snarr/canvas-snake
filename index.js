@@ -3,7 +3,11 @@ let keys = {
   left: 37,
   up: 38,
   right: 39,
-  down: 40
+  down: 40,
+  w: 87,
+  a: 65,
+  s: 83,
+  d: 68
 }
 
 let pause = false;
@@ -115,6 +119,7 @@ setInterval(() => {
 */
 function movePlayer() {
   switch (direction) {
+    case keys.a:
     case keys.left:
       console.log("Left arrow");
 
@@ -125,6 +130,7 @@ function movePlayer() {
       }
 
       break;
+    case keys.w:
     case keys.up:
       console.log("Up arrow");
 
@@ -136,6 +142,7 @@ function movePlayer() {
       
 
       break;
+    case keys.d:
     case keys.right:
       console.log("Right arrow");
 
@@ -147,6 +154,7 @@ function movePlayer() {
       
 
       break;
+    case keys.s:
     case keys.down:
       console.log("Down arrow");
 
@@ -180,6 +188,10 @@ function keyDown(e) {
     case keys.space:
       pause = !pause;
       break;
+    case keys.w:
+    case keys.a:
+    case keys.s:
+    case keys.d:
     case keys.left:
     case keys.up:
     case keys.right:
