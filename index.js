@@ -155,4 +155,4 @@ setInterval(() => {
 
   head.x += head.speedX;
   head.y += head.speedY;
-}, 50)
+}, 80)
