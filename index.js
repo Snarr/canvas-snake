@@ -102,7 +102,7 @@ setInterval(() => {
 
     snake.body.push({ posx: 0, posy: 0 });
 
-    console.log(snake.body.length);
+    document.title = `Snake | ${snake.body.length}`
   }
 
   // Render apple
