@@ -51,7 +51,7 @@ setInterval(() => {
 
     ctx.font = '48px serif';
     ctx.fillStyle = 'white';
-    ctx.fillText(`Gameover!`, 1*unitSize, 3*unitSize);
+    ctx.fillText(`Game over!`, 1*unitSize, 3*unitSize);
     ctx.fillText(`Score: ${snake.body.length}`, 1*unitSize, 6*unitSize);
     ctx.fillText(`Refresh to try again.`, 1*unitSize, (windowSize-1)*unitSize);
 
