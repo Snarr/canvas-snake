@@ -41,8 +41,8 @@ setInterval(() => {
 
   const canvas = document.getElementById('canvas');
   const ctx = canvas.getContext('2d');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = 800;
+  canvas.height = 800;
 
   // Black screen for gameover
   if (gameover) {
@@ -52,20 +52,17 @@ setInterval(() => {
     ctx.font = '48px serif';
     ctx.fillStyle = 'white';
     ctx.fillText(`Gameover!`, 1*unitSize, 3*unitSize);
-    ctx.fillText(`Refresh to try again.`, 1*unitSize, 6*unitSize);
+    ctx.fillText(`Score: ${snake.body.length}`, 1*unitSize, 6*unitSize);
+    ctx.fillText(`Refresh to try again.`, 1*unitSize, (windowSize-1)*unitSize);
 
     pause = true;
+
     return;
   }
 
   // Create background
   ctx.fillStyle = 'green';
   ctx.fillRect(0, 0, windowSize*unitSize, windowSize*unitSize);
-
-  // List score
-  ctx.font = '48px serif';
-  ctx.fillStyle = 'black';
-  ctx.fillText(`Score: ${snake.body.length}`, (windowSize+1)*unitSize, 50);
 
   // Edge detection
   if (snake.x < 0) { snake.x = (windowSize-1)*unitSize }
@@ -104,6 +101,8 @@ setInterval(() => {
     apple.y = unitSize*Math.floor(Math.random() * (windowSize-1));
 
     snake.body.push({ posx: 0, posy: 0 });
+
+    console.log(snake.body.length);
   }
 
   // Render apple
